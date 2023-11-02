@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Examination - SOLARIS</title>
+  </head>
+  <body>
+    <!----------------------------- CONTAINER 1 ----------------------------->
+    <div class="test"><!-- Behövs för att när vi skall gå tillbaka så kan vi inte sätta container1 till display:block igen för då fungerar inte display:grid -->
+      <div class="container1">
+        <header class="headerCont1">
+          <h1 class="rubrik">SOLSYSTEMET</h1>
+          <h3 class="undertext">SOLARIS</h3>
+        </header>
+
+        <section class="SunSection1">
+            <button class="planet-button solen" data-planet="Solen"></button>
+        </section>
+
+        <section class="allPlanets">
+          <!-- Ändra namnen till engelska -->
+          <button class="planet-button merkurius" data-planet="Merkurius"></button>
+          <button class="planet-button venus" data-planet="Venus"></button>
+          <button class="planet-button jorden" data-planet="Jorden"></button>
+          <button class="planet-button mars" data-planet="Mars"></button>
+          <button class="planet-button jupiter" data-planet="Jupiter"></button>
+          <button class="planet-button saturnus" data-planet="Saturnus"></button>
+          <button class="planet-button uranus" data-planet="Uranus"></button>
+          <button class="planet-button neptunus" data-planet="Neptunus"></button>
+        </section>
+
+        <footer>
+          <div class="footer">Nathalie Larsson</div>
+        </footer>
+      </div>
+    </div>
+
+    <!----------------------------- CONTAINER 2 ----------------------------->
+    <div class="test2">
+      <div class="container2">
+        <section class="sunSection2">
+          <button class="theSun2" onclick="goBack()"></button>
+        </section>
+
+        <div class="infoContainer">
+          <div class="item1">
+            <h1 class="name"></h1>
+            <h2 class="latinName"></h2>
+          </div>
+
+          <p class="item2 desc"></p>
+
+          <p class="linje">____________________________________</p>
+
+          <div class="item3">
+          <h3 class="text">OMKRETS</h3>
+          <h3 class="km">KM FRÅN SOLEN</h3>
+          <h3 class="circumference"></h3>
+          <h3 class="distance"></h3>
+          </div>
+
+          <div class="item4">
+            <h3 class="text">MAX TEMPERATUR</h3>
+            <h3 class="text">MIN TEMPERATUR</h3>
+            <h3 class="tempDay"></h3>
+            <h3 class="tempNight"></h3>
+        </div>
+
+        <p class="linje">____________________________________</p>
+
+        <div class="item5">
+            <h3 class="text">MÅNAR</h3>
+            <h3 class="moons"></h3>
+        </div>
+        
+      </div>
+    </div>
+  </body>
+</html>

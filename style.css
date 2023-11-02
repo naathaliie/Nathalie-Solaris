@@ -1,0 +1,268 @@
+/* Normalisera */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Allt i klassen test skall ha default :block, men skall bli none vid klick på en planet */
+  .test {
+    display: block;
+  }
+  
+  .test2 {
+    display: none;
+  }
+  
+  /* Allt i klassen container2 skall ha default :none, och skall bli block vid klick på en planet */
+  /* .container2{
+      display: none;
+  } */
+  /* Alla button */
+  button {
+    border-style: none;
+  }
+  
+  /* Bakgrunden skall vara samma */
+  body {
+    background-image: linear-gradient(to right, #0c164d, #190b22);
+  }
+  
+  /**********CONTAINER1 **********/
+  .container1 {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 10% 70% 20%;
+    grid-template-rows: 20% 60% 20%;
+    grid-template-areas:
+      "theSun1 header header"
+      "theSun1  allPlanets allPlanets"
+      "theSun1 footer footer";
+    gap: 1rem;
+  
+    padding: 5rem;
+  }
+  
+  .headerCont1 {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: end;
+    color: rgb(246, 233, 233);
+  }
+  
+  .name {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: 60px;
+  }
+  
+  .undertext {
+    display: flex;
+    color: #FFD029;
+  }
+  
+  .solen {
+    grid-area: theSun1;
+    position: absolute;
+    top: 50%;
+    transform: translate(-100%, -50%);
+    background-color: #ffd029;
+    height: 100px;
+    width: 50px;
+  
+    border-bottom-right-radius: 90px;
+    border-top-right-radius: 90px;
+    transform: scale(6, 7);
+  }
+  
+  .allPlanets {
+    grid-area: allPlanets;
+    display: flex; /* Flexbox */
+    justify-content: space-evenly; /* Mellanrum mellan varje planet */
+    align-items: center; /* Centrerar planeterna innuti sin box */
+  }
+  
+  .merkurius {
+    background-color: #888888;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+  }
+  
+  .venus {
+    background-color: #e7cdcd;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+  }
+  
+  .jorden {
+    background-color: #428ed4;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+  }
+  
+  .mars {
+    background-color: #ef5f5f;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+  }
+  
+  .jupiter {
+    background-color: #e29468;
+    width: 188px;
+    height: 188px;
+    border-radius: 50%;
+  }
+  
+  .saturnus {
+    /* LÄGG TILL CIRKELN RUNT OM */
+    background-color: #c7aa72;
+    width: 144px;
+    height: 144px;
+    border-radius: 50%;
+  }
+  
+  .uranus {
+    background-color: #c9d4f1;
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+  }
+  
+  .neptunus {
+    background-color: #7a91a7;
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+  }
+  
+  footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: whitesmoke;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+  }
+  
+  /**********CONTAINER 2 **********/
+  
+  .container2 {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns:25% 50% 25% ;
+    grid-template-rows:10% 80% 10%;
+    grid-template-areas:
+    "solen . ."
+    "solen content ."
+    "solen footer footer" ;
+  }
+  
+  .latinName{
+    color: #FFD029;
+  }
+  
+  .sunSection2 {
+    grid-area: solen;
+    display: flex;
+    align-items: center;
+  
+  }
+  
+  .theSun2 {
+    background-color: #6629ff;
+    position: absolute; 
+    top: 50%; /* Placerar solen från toppen till mitten */
+    left: 15%; /* Placerar solen från vänster till mitten */
+    transform: translate(-100%, -50%); 
+    height: 700px; 
+    width: 350px; 
+    border-radius: 0 350px 350px 0;
+   /* Box-Shadow skapar skuggan. Man kan ha flera skuggor */
+    box-shadow: rgb(66, 142, 212, 0.10) 0px 0px 0px 100px, 
+      rgb(66, 142, 212, 0.06) 0px 0px 0px 50px;
+  }
+  
+  
+  .infoContainer {
+    grid-area: content;
+    color: whitesmoke;
+    margin: 50px;
+  }
+  
+  .item1 {
+    margin-bottom: 20px;
+  }
+  
+  .item2 {
+    margin-bottom: 20px;
+  }
+  
+  .linje {
+    margin-bottom: 20px;
+  }
+  
+  .item3{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 20px;
+  }
+  
+  .item3.text{
+      grid-column: span 2;
+      text-align: center;
+  }
+  
+  .item3.text:nth-child(odd){
+      grid-column: 1;
+  }
+  
+  .item3.text:nth-child(even){
+      grid-column: 2;
+  }
+  
+  .item4{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-bottom: 20px;
+    }
+    
+    .item4.text{
+        grid-column: span 2;
+        text-align: center;
+    }
+    
+    .item4.text:nth-child(odd){
+        grid-column: 1;
+    }
+    
+    .item4.text:nth-child(even){
+        grid-column: 2;
+    }
+  
+  
+    .item5{
+      display: grid;
+      grid-template-columns: 1fr;
+      margin-bottom: 20px;
+    }
+    
+    .item5.text{
+        grid-column: span 1;
+        text-align: center;
+    }
+  
+    .item3
+    .item4
+    .item5{
+      padding: 10px;
+    }
+  
