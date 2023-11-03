@@ -127,6 +127,18 @@
     height: 144px;
     border-radius: 50%;
   }
+
+  /* #ellipse{
+    height: 218px;
+    width: 5.5px;
+    border-radius: 50%;
+    background: #FFFFFF66;
+    opacity: 40%;
+    position: absolute;
+    top: -23%;
+    left: 50%;
+    transform: rotate(60deg);
+  } */
   
   .uranus {
     background-color: #c9d4f1;

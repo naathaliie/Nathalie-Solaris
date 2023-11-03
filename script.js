@@ -1,6 +1,11 @@
+/* Lägger APIet i en egen variabel som är global */
 const apiUrl = "https://majazocom.github.io/Data/solaris.json";
+
+/* Variabel som skall användas för att lagra den data som hämtas från API:et.
+Den kommer att uppdateras med den senaste data som hämtas från serven/api:et */
 let currentPlanetData;
 
+/* Funktion som använder "fetch" för att hämta data från API:et*/
 function getApi(planetName) {
   fetch(apiUrl)
     .then((response) => {
@@ -18,7 +23,10 @@ function getApi(planetName) {
       console.error('Error:', error);
     });
 }
-
+/* Funktion kallas på innifrån getAPI och använder dess lokala variablar som parametrar.
+Funktionen går igenom data och letar efter om planetName finns.
+Om planetName finns innuti data så skall vi lägga till vald info från data till
+rätt HTML-element */
 function displayPlanetInfo(data, planetName) {
   const planet = data.find((planet) => planet.name === planetName);
 
@@ -32,18 +40,10 @@ function displayPlanetInfo(data, planetName) {
     document.querySelector('.tempNight').textContent = planet.temp.night;
     document.querySelector('.moons').textContent = planet.moons;
 
-    // Update other elements with planet data as needed
-
-    // Display data in the .test2 container as well
-    const container2 = document.querySelector(".test2");
-    container2.querySelector('.name').textContent = planet.name;
-    container2.querySelector('.latinName').textContent = planet.latinName;
-    
-
-    // Update other elements in .test2 with planet data as needed
   }
 }
 
+//DOMContentLoaded = används för att säkerställa 
 document.addEventListener("DOMContentLoaded", () => {
   const planetButtons = document.querySelectorAll('.planet-button');
 
