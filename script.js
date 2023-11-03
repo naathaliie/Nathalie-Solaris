@@ -43,7 +43,7 @@ function displayPlanetInfo(data, planetName) {
   }
 }
 
-//DOMContentLoaded = används för att säkerställa 
+//DOMContentLoaded = används för att säkerställa att 
 document.addEventListener("DOMContentLoaded", () => {
   const planetButtons = document.querySelectorAll('.planet-button');
 
@@ -56,8 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function goToPlanet(planetName) {
-    const container1 = document.querySelector(".test");
-    const container2 = document.querySelector(".test2");
+    const container1 = document.querySelector(".outerContainer");
+    const container2 = document.querySelector(".outerContainer2");
 
     container1.style.display = "none";
     container2.style.display = "block";
@@ -67,8 +67,8 @@ document.addEventListener("DOMContentLoaded", () => {
 //Gå tillbaka från infosidan till förstasidan
 
 function goBack() {
-    const container1 = document.querySelector(".test");
-    const container2 = document.querySelector(".test2");
+    const container1 = document.querySelector(".outerContainer");
+    const container2 = document.querySelector(".outerContainer2");
 
     container2.style.display = "none";
     container1.style.display = "block";

@@ -9,11 +9,11 @@
   </head>
   <body>
     <!----------------------------- CONTAINER 1 ----------------------------->
-    <div class="test"><!-- Behövs för att när vi skall gå tillbaka så kan vi inte sätta container1 till display:block igen för då fungerar inte display:grid -->
+    <div class="outerContainer"><!-- Behövs för att när vi skall gå tillbaka så kan vi inte sätta container1 till display:block igen för då fungerar inte display:grid -->
       <div class="container1">
         <header class="headerCont1">
-          <h1 class="rubrik">SOLSYSTEMET</h1>
-          <h3 class="undertext">SOLARIS</h3>
+          <h1 class="heading">SOLSYSTEMET</h1>
+          <h3 class="subtitle">SOLARIS</h3>
         </header>
 
         <section class="SunSection1">
@@ -21,15 +21,14 @@
         </section>
 
         <section class="allPlanets">
-          <!-- Ändra namnen till engelskaaa -->
-          <button class="planet-button merkurius" data-planet="Merkurius"></button>
-          <button class="planet-button venus" data-planet="Venus"></button>
-          <button class="planet-button jorden" data-planet="Jorden"></button>
-          <button class="planet-button mars" data-planet="Mars"></button>
-          <button class="planet-button jupiter" data-planet="Jupiter"></button>
-          <button class="planet-button saturnus" data-planet="Saturnus"></button>
-          <button class="planet-button uranus" data-planet="Uranus"></button>
-          <button class="planet-button neptunus" data-planet="Neptunus"></button>
+          <button class="buttonEffect planet-button merkurius" data-planet="Merkurius"></button>
+          <button class="buttonEffect planet-button venus" data-planet="Venus"></button>
+          <button class="buttonEffect planet-button jorden" data-planet="Jorden"></button>
+          <button class="buttonEffect planet-button mars" data-planet="Mars"></button>
+          <button class="buttonEffect planet-button jupiter" data-planet="Jupiter"></button>
+          <button class="buttonEffect planet-button saturnus" data-planet="Saturnus"></button>
+          <button class="buttonEffect planet-button uranus" data-planet="Uranus"></button>
+          <button class="buttonEffect planet-button neptunus" data-planet="Neptunus"></button>
           
         </section>
 <!-- <div id="ellipse"></div> -->
@@ -40,10 +39,10 @@
     </div>
 
     <!----------------------------- CONTAINER 2 ----------------------------->
-    <div class="test2">
+    <div class="outerContainer2">
       <div class="container2">
         <section class="sunSection2">
-          <button class="theSun2" onclick="goBack()"></button>
+          <button class="buttonEffect theSun2" onclick="goBack()"></button>
         </section>
 
         <div class="infoContainer">
@@ -54,7 +53,7 @@
 
           <p class="item2 desc"></p>
 
-          <p class="linje">____________________________________</p>
+          <p class="line">____________________________________</p>
 
           <div class="item3">
           <h3 class="text">OMKRETS</h3>
@@ -70,7 +69,7 @@
             <h3 class="tempNight"></h3>
         </div>
 
-        <p class="linje">____________________________________</p>
+        <p class="line">____________________________________</p>
 
         <div class="item5">
             <h3 class="text">MÅNAR</h3>

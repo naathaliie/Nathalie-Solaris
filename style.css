@@ -5,22 +5,26 @@
     padding: 0;
   }
   
-  /* Allt i klassen test skall ha default :block, men skall bli none vid klick på en planet */
-  .test {
+  /* Allt i klassen outerContainer skall ha default:block och skall bli none vid klick på en planet */
+  .outerContainer {
     display: block;
   }
   
-  .test2 {
+    /* Allt i klassen outerContainer2 skall ha default:none och skall bli block vid klick på en planet */
+  .outerContainer2 {
     display: none;
   }
   
-  /* Allt i klassen container2 skall ha default :none, och skall bli block vid klick på en planet */
-  /* .container2{
-      display: none;
-  } */
-  /* Alla button */
+
+  /* Alla buttons*/
   button {
     border-style: none;
+  }
+
+  /* Effect på alla buttons */
+  .buttonEffect{
+    transition: 0.5s;
+    background-size: 200% auto;
   }
   
   /* Bakgrunden skall vara samma */
@@ -59,7 +63,7 @@
     font-size: 60px;
   }
   
-  .undertext {
+  .subtitle {
     display: flex;
     color: #FFD029;
   }
@@ -83,6 +87,7 @@
     display: flex; /* Flexbox */
     justify-content: space-evenly; /* Mellanrum mellan varje planet */
     align-items: center; /* Centrerar planeterna innuti sin box */
+    
   }
   
   .merkurius {
@@ -90,6 +95,8 @@
     width: 14px;
     height: 14px;
     border-radius: 50%;
+    box-shadow: 0px 0px 50px 20px #888888; /* skuggningen */
+    background-image: linear-gradient(45deg, #c0bebe 0%, #888888  51%, #c0bebe  100%);/* Background-image gör att det rör sig när man hovrar över */
   }
   
   .venus {
@@ -97,6 +104,8 @@
     width: 26px;
     height: 26px;
     border-radius: 50%;
+    box-shadow: 0px 0px 50px 10px #e7cdcd; /* skuggningen */
+    background-image: linear-gradient(45deg, #e2abab 0%, #e7cdcd  51%, #e2abab  100%);/* Background-image gör att det rör sig när man hovrar över */
   }
   
   .jorden {
@@ -104,6 +113,8 @@
     width: 28px;
     height: 28px;
     border-radius: 50%;
+    box-shadow: 0px 0px 50px 10px #428ed4; /* skuggningen */
+    background-image: linear-gradient(45deg, #8cb0d2 0%, #428ed4  51%, #8cb0d2  100%);/* Background-image gör att det rör sig när man hovrar över */
   }
   
   .mars {
@@ -111,6 +122,8 @@
     width: 14px;
     height: 14px;
     border-radius: 50%;
+    box-shadow: 0px 0px 50px 10px #ef5f5f; /* skuggningen */
+    background-image: linear-gradient(45deg, #f59898 0%, #ef5f5f  51%, #f59898  100%);/* Background-image gör att det rör sig när man hovrar över */
   }
   
   .jupiter {
@@ -118,7 +131,18 @@
     width: 188px;
     height: 188px;
     border-radius: 50%;
+    box-shadow: 0px 0px 50px 10px #e29d75; /* skuggningen */
+    background-image: linear-gradient(45deg, #dfb7a0 0%, #e29468  51%, #dfb7a0  100%);/* Background-image gör att det rör sig när man hovrar över */
+    
   }
+
+    .buttonEffect:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #ffffff;
+    text-decoration: none;
+  }
+ 
   
   .saturnus {
     /* LÄGG TILL CIRKELN RUNT OM */
@@ -126,7 +150,11 @@
     width: 144px;
     height: 144px;
     border-radius: 50%;
+    box-shadow: 0px 0px 50px 10px #c7aa72; /* skuggningen */
+    background-image: linear-gradient(45deg, #cac1b0 0%, #c7aa72  51%, #cac1b0  100%);/* Background-image gör att det rör sig när man hovrar över */
   }
+
+
 
   /* #ellipse{
     height: 218px;
@@ -145,6 +173,8 @@
     width: 66px;
     height: 66px;
     border-radius: 50%;
+    box-shadow: 0px 0px 50px 10px #c9d4f1; /* skuggningen */
+    background-image: linear-gradient(45deg, #a5a5a5 0%, #c9d4f1  51%, #a5a5a5  100%);/* Background-image gör att det rör sig när man hovrar över */
   }
   
   .neptunus {
@@ -152,6 +182,8 @@
     width: 66px;
     height: 66px;
     border-radius: 50%;
+    box-shadow: 0px 0px 50px 10px #7a91a7; /* skuggningen */
+    background-image: linear-gradient(45deg, #a8b7c6 0%, #7a91a7  51%, #a8b7c6  100%);/* Background-image gör att det rör sig när man hovrar över */
   }
   
   footer {
@@ -201,6 +233,7 @@
    /* Box-Shadow skapar skuggan. Man kan ha flera skuggor */
     box-shadow: rgb(66, 142, 212, 0.10) 0px 0px 0px 100px, 
       rgb(66, 142, 212, 0.06) 0px 0px 0px 50px;
+    background-image: linear-gradient(45deg, #8352ff 0%, #6629ff  51%, #8352ff  100%);/* Background-image gör att det rör sig när man hovrar över */
   }
   
   
@@ -218,7 +251,7 @@
     margin-bottom: 20px;
   }
   
-  .linje {
+  .line {
     margin-bottom: 20px;
   }
   
