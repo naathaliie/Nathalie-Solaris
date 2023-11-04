@@ -23,10 +23,11 @@ function getApi(planetName) {
       console.error('Error:', error);
     });
 }
-/* Funktion kallas på innifrån getAPI och använder dess lokala variablar som parametrar.
-Funktionen går igenom data och letar efter om planetName finns.
-Om planetName finns innuti data så skall vi lägga till vald info från data till
-rätt HTML-element */
+
+/* Funktionen kallas på innifrån getAPI och använder dess lokala variablar som parametrar.
+Funktionen går igenom "data" och letar efter om "planetName" finns.
+Om "planetName" finns innuti "data" så skall vi lägga till vald info från "data" till
+rätt HTML-element med querySelector*/
 function displayPlanetInfo(data, planetName) {
   const planet = data.find((planet) => planet.name === planetName);
 
@@ -39,11 +40,11 @@ function displayPlanetInfo(data, planetName) {
     document.querySelector('.tempDay').textContent = planet.temp.day;
     document.querySelector('.tempNight').textContent = planet.temp.night;
     document.querySelector('.moons').textContent = planet.moons;
-
   }
 }
-
-//DOMContentLoaded = används för att säkerställa att 
+//När webbsidan laddas (DOMContentLoaded) så lyssnar koden(addEventListener) efter klick på knappar
+//med klassen .planet-button. När en knapp klickas så hämtas data från ett API
+// och därefter dirigeras till den valda planeten.
 document.addEventListener("DOMContentLoaded", () => {
   const planetButtons = document.querySelectorAll('.planet-button');
 
@@ -51,11 +52,14 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener('click', function () {
       const planetName = button.getAttribute('data-planet');
       getApi(planetName);
-      goToPlanet(planetName);
+      goToPlanet();
     });
   });
 
-  function goToPlanet(planetName) {
+  //Anropas innifrån forEach loopen i eventListener
+  //gör att container 1 blir dold (none) och container 2 blir synlig (block)
+  //när man klickar på en knapp med klassen .planet-button.
+  function goToPlanet() {
     const container1 = document.querySelector(".outerContainer");
     const container2 = document.querySelector(".outerContainer2");
 
@@ -64,7 +68,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-//Gå tillbaka från infosidan till förstasidan
+//Gå tillbaka
+//Via en "onclick" i HTML så blir container 1 synlig (block) och container 2 dold (none)
+//när man klickar på "thesun2".
 
 function goBack() {
     const container1 = document.querySelector(".outerContainer");

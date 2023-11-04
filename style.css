@@ -55,6 +55,7 @@
     justify-content: flex-end;
     align-items: end;
     color: rgb(246, 233, 233);
+    font-size: larger;
   }
   
   .name {
@@ -80,6 +81,8 @@
     border-bottom-right-radius: 90px;
     border-top-right-radius: 90px;
     transform: scale(6, 7);
+    box-shadow: 0px 0px 50px -1px #ffd029; /* skuggningen */
+    background-image: linear-gradient(45deg, #fde799 0%, #ffd029  51%, #fde799  100%);
   }
   
   .allPlanets {
